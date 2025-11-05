@@ -43,7 +43,7 @@ def main():
         for asteroid in asteroids:
             for shot in shots:
                 if asteroid.collides_with(shot):
-                    pygame.sprite.Sprite.kill(asteroid)
+                    asteroid.split()
                     pygame.sprite.Sprite.kill(shot)
 
         screen.fill("black")
